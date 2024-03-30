@@ -5,9 +5,9 @@ An elegant personal honepage, revised from [ZYYO homepage](https://github.com/ZY
 This project was originally crafted by @ZYYO666
 
 ## ScreenShots
-![LightMode](LightMode.png)
+![LightMode](/LightMode.png)
 
-![DarkMode](DarkMode.png)
+![DarkMode](/DarkMode.png)
 
 ## Features
 - [x] Support dual themes
