@@ -80,16 +80,6 @@ html[data-theme="dack"] {
 
 
 
-
-
-
-
-
-
-
-
-
-
 body {
     display: flex;
     height: 100%;
@@ -619,6 +609,15 @@ footer {
     color: var(--footer-text-color);
     font-size: 13px;
     margin-top: 20px;
+}
+
+.footer-links {
+    color: var(--footer-text-color);
+}
+
+.footer-links:hover {
+    color: white;
+    transition: 0.3;
 }
 
 
