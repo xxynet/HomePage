@@ -10,10 +10,10 @@ This project was originally crafted by [@ZYYO666](https://github.com/ZYYO666)
 ![DarkMode](/DarkMode.png)
 
 ## Features
-- [x] Support dual themes
+- [x] Supporting dual themes
 - [x] Smooth transition while switching themes
-- [x] Support two types of length icon boxes
-- [ ] Enhance code readability
+- [x] Supporting two types of length icon boxes
+- [ ] Enhancing code readability
 
 
 ## Demo
