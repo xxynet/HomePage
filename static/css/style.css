@@ -121,7 +121,7 @@ body {
     height: 200px;
     width: 200px;
     position: relative;
-    transition all 1s ease;
+    transition: all 1s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -526,22 +526,12 @@ body {
 }
 
 .projectItem {
-    opacity: 0;
-    /* transition-delay: 0.2s; */
     display: flex;
     background-color: var(--project-item-bg-color, #e8dfc4);
     border-radius: 8px;
     padding: 18px;
     height: 105px;
     width: calc(50% - 60px);
-    transition: all 0.2s ease;
-
-
-}
-
-.projectItem.fade-in-visible {
-    opacity: 1;
-    /*transform: translateY(0);*/
 }
 
 

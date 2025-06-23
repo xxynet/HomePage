@@ -142,6 +142,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    /*加载效果*/
+    // var pageLoading = document.querySelector("#PageLoading");
+    // var center = document.getElementById("PageLoading-zyyo-center");
+    // setTimeout(function () {
+    //     pageLoading.style.opacity = '0';
+    //     center.style.height = "500px";
+    //     center.style.width = "500px";
+    //     center.style.opacity = "0";
+    //     pageLoading.style.backgroundSize = "200%";
+    // }, 300);
+
+    // 暂时强制深色模式
+    // changeTheme("Dark")
+
     /*淡入效果*/
     var projectItems = document.querySelectorAll(".projectItem");
     function checkProjectItems() {
@@ -150,31 +164,12 @@ document.addEventListener('DOMContentLoaded', function () {
             var projectItemTop = projectItem.getBoundingClientRect().top;
 
             if (projectItemTop < window.innerHeight * 1.2) {
-                projectItem.classList.add("fade-in-visible");
+                // projectItem.classList.add("fade-in-visible");
             }
         }
     }
 
     window.addEventListener("scroll", checkProjectItems);
     window.addEventListener("resize", checkProjectItems);
-
-
-
-    /*加载效果*/
-    var pageLoading = document.querySelector("#PageLoading");
-    var center = document.getElementById("PageLoading-zyyo-center");
-    setTimeout(function () {
-        checkProjectItems();
-        pageLoading.style.opacity = '0';
-        center.style.height = "500px";
-        center.style.width = "500px";
-        center.style.opacity = "0";
-        pageLoading.style.backgroundSize = "200%";
-    }, 300);
-
-    // 暂时强制深色模式
-    // changeTheme("Dark")
-
-
 
 });
