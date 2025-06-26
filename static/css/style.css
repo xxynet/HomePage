@@ -125,25 +125,6 @@ body {
     transition: all 0.5s ease;
 }
 
-#PageLoading-zyyo {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-#PageLoading-zyyo-center {
-    height: 200px;
-    width: 200px;
-    position: relative;
-    transition: all 1s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .object {
     -moz-border-radius: 50% 50% 50% 50%;
     -webkit-border-radius: 50% 50% 50% 50%;
