@@ -5,7 +5,12 @@ An elegant personal honepage, revised from [ZYYO homepage](https://github.com/ZY
 This project was originally crafted by [@ZYYO666](https://github.com/ZYYO666)
 
 ## ScreenShots
+
+Newly designed light mode
+
 ![LightMode](/LightMode.png)
+
+Dark mode
 
 ![DarkMode](/DarkMode.png)
 
