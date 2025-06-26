@@ -12,6 +12,26 @@
     font-display: swap;
 }
 
+:root {
+    --main-bg-color: #f5f7fa;
+    --main-text-color: #222831;
+    --gradient-start: #4f8cff;
+    --gradient-middle: #a084e8;
+    --gradient-end: #f7b267;
+    --purple-text-color: #6c63ff;
+    --text-bg-color: #e3e8f0;
+    --icon-bg-color: #f0f4fa;
+    --project-item-bg-color: #ffffff;
+    --project-item-hover-color: #f0f4fa;
+    --project-item-left-title-color: #222831;
+    --project-item-left-text-color: #6c757d;
+    --footer-text-color: #8a99b3;
+    --icon-1-hover-color: #e3e8f0;
+    --icon-2-hover-color: #e3e8f0;
+    --icon-3-hover-color: #e3e8f0;
+    --icon-4-hover-color: #e3e8f0;
+    --icon-5-hover-color: #e3e8f0;
+}
 
 * {
     font-family: "b", "a", sans-serif;
@@ -45,7 +65,7 @@ a:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-text-color, #000000);
+    background-color: var(--main-text-color);
     border-radius: 8px;
     height: 20%;
 }
@@ -64,20 +84,17 @@ html[data-theme="dack"] {
     --purple-text-color: #747bff;
     --text-bg-color: rgb(26, 4, 48);
     --icon-bg-color: rgb(19, 20, 24);
-    /*--icon-1-hover-color: rgb(68, 120, 241);*/
-    /*--icon-2-hover-color: rgb(232, 68, 241);*/
-    /*--icon-3-hover-color: rgb(179, 206, 0);*/
-    /*--icon-4-hover-color: rgb(201, 13, 0);*/
-    /*--icon-5-hover-color: rgb(111, 44, 20);*/
     --project-item-bg-color: rgb(19, 20, 24);
     --project-item-hover-color: rgb(31, 33, 35);
     --project-item-left-title-color: rgb(255, 255, 255);
     --project-item-left-text-color: rgb(142, 142, 142);
     --footer-text-color: #646464;
+    --icon-1-hover-color: rgb(34, 39, 46);
+    --icon-2-hover-color: rgb(0, 172, 238);
+    --icon-3-hover-color: rgb(251, 114, 153);
+    --icon-4-hover-color: rgb(248, 113, 113);
+    --icon-5-hover-color: rgb(31, 33, 35);
 }
-
-
-
 
 
 body {
@@ -85,15 +102,15 @@ body {
     height: 100%;
     min-height: 100vh;
     width: 100%;
-    background: var(--main-bg-color, #fffae8);
+    background: var(--main-bg-color);
     overflow-x: hidden;
     justify-content: center;
-    color: var(--main-text-color, #000000);
+    color: var(--main-text-color);
 
 }
 
 #PageLoading {
-    background: radial-gradient(white, #d8eaff);
+    background: radial-gradient(white);
     background-size: 100%;
     background-position: center;
     background-color: #ffffff;
@@ -251,7 +268,7 @@ body {
     border-radius: 13px;
     margin-top: 15px;
     padding: 20px;
-    background: var(--project-item-bg-color, #e8dfc4);
+    background: var(--project-item-bg-color);
     /* rgba(249, 250, 251, 0.6) */
 }
 
@@ -287,7 +304,7 @@ body {
     padding: 10px;
     font-size: 13px;
     border-radius: 10px;
-    background: var(--main-bg-color, rgb(193, 167, 102));
+    background: var(--main-bg-color);
 
 }
 
@@ -392,13 +409,13 @@ body {
 }
 
 .purpleText {
-    color: var(--purple-text-color, #747bff);
+    color: var(--purple-text-color);
     font-weight: 800;
 }
 
 .textBackground {
     font-weight: 800;
-    background: var(--text-bg-color, #f4f4f4);
+    background: var(--text-bg-color);
     border-radius: 5px;
     font-size: 15px;
     padding: 3px 5px;
@@ -426,7 +443,7 @@ body {
     width: 44px;
     height: 40px;
     box-sizing: border-box;
-    background: var(--icon-bg-color, rgba(249, 250, 251, 0.6));
+    background: var(--icon-bg-color);
     border-radius: 7px;
     display: flex;
     gap: 5px;
@@ -440,7 +457,7 @@ body {
     width: 80px;
     height: 40px;
     box-sizing: border-box;
-    background: var(--icon-bg-color, rgba(249, 250, 251, 0.6));
+    background: var(--icon-bg-color);
     border-radius: 7px;
     display: flex;
     gap: 5px;
@@ -465,23 +482,23 @@ body {
 
 
 .iconItemLong:nth-child(1):hover {
-    background: var(--icon-1-hover-color, rgb(34, 39, 46));
+    background: var(--icon-1-hover-color);
 }
 
 .iconItem:nth-child(2):hover {
-    background: var(--icon-2-hover-color, rgb(0, 172, 238));
+    background: var(--icon-2-hover-color);
 }
 
 .iconItem:nth-child(3):hover {
-    background: var(--icon-3-hover-color, rgb(251, 114, 153));
+    background: var(--icon-3-hover-color);
 }
 
 .iconItem:nth-child(4):hover {
-    background: var(--icon-4-hover-color, rgb(248, 113, 113));
+    background: var(--icon-4-hover-color);
 }
 
 .iconItem:nth-child(5):hover {
-    background: var(--icon-5-hover-color, rgb(31, 33, 35));
+    background: var(--icon-5-hover-color);
 }
 
 .iconItem:hover .iconTip {
@@ -491,7 +508,7 @@ body {
 .switch:hover {
     width: 55px;
 
-    background: var(--icon-5-hover-color, rgb(31, 33, 35));
+    background: var(--icon-5-hover-color);
 }
 
 .tanChiShe {
@@ -527,7 +544,7 @@ body {
 
 .projectItem {
     display: flex;
-    background-color: var(--project-item-bg-color, #e8dfc4);
+    background-color: var(--project-item-bg-color);
     border-radius: 8px;
     padding: 18px;
     height: 105px;
@@ -537,7 +554,7 @@ body {
 
 .projectItem:hover {
     box-shadow: 0 8px 16px -4px #2c2d300c;
-    background-color: var(--project-item-hover-color, #dac99b);
+    background-color: var(--project-item-hover-color);
 }
 
 
@@ -545,7 +562,7 @@ body {
 .projectItemLeft p {
     font-size: 13px;
     margin-top: 5px;
-    color: var(--project-item-left-text-color, #7e7e7e);
+    color: var(--project-item-left-text-color);
 }
 
 .projectItemLeft h1 {
@@ -554,7 +571,7 @@ body {
     margin: 0px;
 
     transition: all 0.4s ease;
-    color: var(--project-item-left-title-color, #000000);
+    color: var(--project-item-left-title-color);
 }
 
 .projectItemLeft {
@@ -697,7 +714,7 @@ footer {
         /*侧边栏隐藏在屏外宽度*/
         padding: 15px;
         box-sizing: border-box;
-        background: var(--main-bg-color, linear-gradient(50deg, #a2d1ff, #ffffff));
+        background: var(--main-bg-color);
         transition: all 0.25s ease-out;
     }
 
@@ -777,7 +794,7 @@ footer {
     align-items: center;
     height: 40px;
     width: 40px;
-      background-color: var(--project-item-bg-color, rgba(249, 250, 251, 0.6));
+      background-color: var(--project-item-bg-color);
     margin-top: 30px;
     border-radius: 50%;
 }
