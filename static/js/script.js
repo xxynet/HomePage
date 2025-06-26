@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
             themeState = "Dark";
             changeSvg("#ffffff");
             tanChiShe.src = "./static/svg/snake-Dark.svg";
-            htmlTag.dataset.theme = 'dack';
+            htmlTag.dataset.theme = 'dark';
         } else if (theme == "Light") {
             themeState = "Light";
             changeSvg("#000000");
