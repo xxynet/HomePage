@@ -11,17 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./static/css/style.css?v=1.33">
 
-    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    <script>LA.init({id:"KQZZoV6kueh7rZJy",ck:"KQZZoV6kueh7rZJy"})</script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="bff3966b-07d2-4dd3-b354-7668a34ac655"></script>
 
     <script>
-  (function() {
-    var theme = document.cookie.match(/themeState=([^;]+)/);
-    if (theme && theme[1] === "Dark") {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  })();
-</script>
+        (function() {
+            var theme = document.cookie.match(/themeState=([^;]+)/);
+            if (theme && theme[1] === "Dark") {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 
 </head>
 <body>
@@ -78,7 +77,12 @@
                         <div>Future</div>
                         <div>To be continued</div>
                     </li>
+
                     <li>
+                        <div class="focus"></div>
+                        <div>2025-06-26</div>
+                        <div>New design of light mode</div>
+                    </li>
                     
                     <li>
                         <div class="focus"></div>
@@ -173,9 +177,14 @@
             </div>
         </header>
 
+        <!-- Tab buttons -->
+        <div class="button-container">
+            <button class="tab-button but-active" onclick="openTab('tab1')">Projects</button>
+            <button class="tab-button" onclick="openTab('tab2')">Intro</button>
+            <button class="tab-button" onclick="openTab('tab3')">FAQ</button>
+        </div>
 
-
-        <content>
+        <div id="tab1" class="tab-content content-active">
             <div class="title">
                 <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="1891" width="26px" height="26px">
@@ -266,7 +275,64 @@
                 <img id="skillPc" src="./static/svg/skillPc.svg" alt="" srcset="">
                 <img id="skillWap" src="./static/svg/skillWap.svg" alt="" srcset="">
             </div>
-        </content>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <!-- <div class="title">
+                <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="1891" width="26px" height="26px">
+                    <path
+                        d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                        fill="#000000" p-id="1892"></path>
+                    <path
+                        d="M464 688a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z"
+                        fill="#000000" p-id="1893"></path>
+                </svg>
+                Introduction
+            </div> -->
+            <div class="intro-content">
+                <p>Hi, I'm Caleb, really into tech & language, exploring various fields. i...</p>
+
+                <ul class="intro-ul">
+                    <li>create easy-to-use software</li>
+                    <li>make open source projects on Github</li>
+                    <li>wanna learn photography & editing</li>
+                    <li>am learning foregin languages</li>
+                </ul>
+
+                <h3>MY INTERESTS</h3>
+                <ul class="intro-ul">
+                    <li>web development</li>
+                    <li>coding in Python</li>
+                    <li>artificial intelligence</li>
+                    <li>language learning</li>
+                </ul>
+
+                <h3>LANGUAGE PROFICIENCY</h3>
+                <P>Native fluency of Chinese/中文, understanding English (speaking sucks tho) and a little bit of Japanese/日本語</P>
+            </div>
+        </div>
+
+        <div id="tab3" class="tab-content">
+            <!-- <div class="title">
+                <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="1891" width="26px" height="26px">
+                    <path
+                        d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                        fill="#000000" p-id="1892"></path>
+                    <path
+                        d="M512 336c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176z"
+                        fill="#000000" p-id="1893"></path>
+                </svg>
+                About Me
+            </div> -->
+            <div class="about-content">
+                <p>CONSTRUCTING...</p>
+                <!-- <p>🌍 Based in 127.0.0.1</p>
+                <p>💻 Working on exciting projects</p>
+                <p>📧 Get in touch: [Your Email]</p> -->
+            </div>
+        </div>
 
         <footer>
             Caleb XXY © 2024 &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -292,6 +358,27 @@
 </div>
 
 <script src="./static/js/script.js?v=1.33"> </script>
+<script>
+function openTab(tabName) {
+    // Hide all tab content
+    var tabContents = document.getElementsByClassName('tab-content');
+    for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove('content-active');
+    }
+    
+    // Remove active class from all buttons
+    var tabButtons = document.getElementsByClassName('tab-button');
+    for (var i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('but-active');
+    }
+    
+    // Show the selected tab content
+    document.getElementById(tabName).classList.add('content-active');
+    
+    // Add active class to the clicked button
+    event.target.classList.add('but-active');
+}
+</script>
 
 </body>
 

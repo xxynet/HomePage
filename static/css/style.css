@@ -21,11 +21,16 @@
     --purple-text-color: #6c63ff;
     --text-bg-color: #e3e8f0;
     --icon-bg-color: #f0f4fa;
+    --tab-button-bg-color: #ffffff;
+    --tab-button-hover-bg-color: #f0f4fa;
+    --tab-button-selected-bg-color: #84b5db;
+    --tab-button-text-color: #222831;
     --project-item-bg-color: #ffffff;
     --project-item-hover-color: #f0f4fa;
     --project-item-left-title-color: #222831;
     --project-item-left-text-color: #6c757d;
     --footer-text-color: #8a99b3;
+    --footer-text-hover-color: #819ed0;
     --icon-1-hover-color: #e3e8f0;
     --icon-2-hover-color: #e3e8f0;
     --icon-3-hover-color: #e3e8f0;
@@ -84,11 +89,16 @@ html[data-theme="dark"] {
     --purple-text-color: #747bff;
     --text-bg-color: rgb(26, 4, 48);
     --icon-bg-color: rgb(19, 20, 24);
+    --tab-button-bg-color: rgb(19, 20, 24);
+    --tab-button-hover-bg-color: rgb(31, 33, 35);
+    --tab-button-selected-bg-color: rgba(255, 255, 255, 0.873);
+    --tab-button-text-color: white;
     --project-item-bg-color: rgb(19, 20, 24);
     --project-item-hover-color: rgb(31, 33, 35);
     --project-item-left-title-color: rgb(255, 255, 255);
     --project-item-left-text-color: rgb(142, 142, 142);
     --footer-text-color: #646464;
+    --footer-text-hover-color: rgba(255, 255, 255, 0.812);
     --icon-1-hover-color: rgb(34, 39, 46);
     --icon-2-hover-color: rgb(0, 172, 238);
     --icon-3-hover-color: rgb(251, 114, 153);
@@ -459,9 +469,6 @@ body {
 }
 
 
-
-
-
 .iconItemLong:nth-child(1):hover {
     background: var(--icon-1-hover-color);
 }
@@ -514,6 +521,115 @@ body {
 
 .title:hover {
     /*transform: translateY(-5px);*/
+}
+
+.button-container {
+    display: flex;
+    gap: 12px;
+    margin: 30px 0;
+    align-items: center;
+    padding: 8px;
+    background: var(--project-item-bg-color);
+    border-radius: 16px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--project-item-left-text-color);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tab-button:not(.but-active):hover {
+    background: var(--tab-button-hover-bg-color);
+    color: var(--tab-button-text-color);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+.but-active {
+    background: var(--purple-text-color);
+    color: white;
+    /* box-shadow: 0 4px 16px rgba(108, 99, 255, 0.3); */
+}
+
+.but-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.content-active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro-content, .about-content {
+    background: var(--project-item-bg-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.intro-content p, .about-content p {
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--project-item-left-text-color);
+}
+
+.intro-content p:first-child, .about-content p:first-child {
+    margin-top: 0;
+}
+
+.intro-content p:last-child, .about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.intro-ul {
+    padding-left: 20px; 
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--project-item-left-text-color);
+    list-style-type: disc; 
 }
 
 .projectList {
@@ -604,7 +720,7 @@ footer {
 }
 
 .footer-links:hover {
-    color: white;
+    color: var(--footer-text-hover-color);
     transition: 0.3;
 }
 
@@ -641,6 +757,17 @@ footer {
 
     }
 
+    .button-container {
+        margin: 20px 0;
+        padding: 6px;
+        gap: 8px;
+    }
+
+    .tab-button {
+        padding: 10px 16px;
+        font-size: 14px;
+        min-height: 40px;
+    }
 
     .projectItemLeft p {
         font-size: 14px;
@@ -867,4 +994,8 @@ footer {
 
 .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
     right: 50%;
+}
+
+.tab-button, .button-container button {
+    -webkit-tap-highlight-color: transparent;
 }

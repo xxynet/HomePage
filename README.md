@@ -1,8 +1,5 @@
 # HomePage
-An elegant personal honepage, revised from [ZYYO homepage](https://github.com/ZYYO666/homepage)
-
-## Statement
-This project was originally crafted by [@ZYYO666](https://github.com/ZYYO666)
+An elegant personal honepage
 
 ## ScreenShots
 
@@ -14,11 +11,21 @@ Dark mode
 
 ![DarkMode](/DarkMode.png)
 
+## Statement
+This project was inspired by following projects:
+
+- [ZYYO homepage](https://github.com/ZYYO666/homepage) (revised from)
+
+- [Xhofe](https://nn.ci/) (reference)
+
+- [Diu](https://ddiu.io/) (reference)
+
 ## Features
-- [x] Supporting dual themes
+- [x] Support dual themes
 - [x] Smooth transition while switching themes
-- [x] Supporting two types of length icon boxes
-- [ ] Enhancing code readability
+- [x] Support two types of length icon boxes
+- [x] Three columns of content
+- [x] Enhance code readability
 
 
 ## Demo
