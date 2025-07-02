@@ -83,9 +83,12 @@ a:focus {
 html[data-theme="dark"] {
     --main-bg-color: rgb(0, 0, 0);
     --main-text-color: #fff;
-    --gradient-start: rgb(133, 62, 255);
+    /* --gradient-start: rgb(133, 62, 255);
     --gradient-middle: #f76cc6;
-    --gradient-end: rgb(255, 255, 255);
+    --gradient-end: rgb(255, 255, 255); */
+    --gradient-start: #4f8cff;
+    --gradient-middle: #a084e8;
+    --gradient-end: #f7b267;
     --purple-text-color: #747bff;
     --text-bg-color: rgb(26, 4, 48);
     --icon-bg-color: rgb(19, 20, 24);
@@ -627,9 +630,24 @@ body {
     padding-left: 20px; 
     margin: 12px 0;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 2;
     color: var(--project-item-left-text-color);
     list-style-type: disc; 
+}
+
+.highlight-text {
+    color: var(--purple-text-color);
+    font-weight: bold;
+}
+
+.highlight-link {
+    color: var(--purple-text-color);
+    text-decoration: underline;
+    transition: all 0.25s ease;
+}
+
+.highlight-link:hover {
+    color: #b0b4f7;
 }
 
 .projectList {

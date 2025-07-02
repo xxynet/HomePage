@@ -1,4 +1,4 @@
-console.log('%cCopyright © 2024 Caleb XXY', 'background-color: #ff00ff; color: white; font-size: 24px; font-weight: bold; padding: 10px;');
+console.log('%cCopyright © 2024-2025 Caleb XXY', 'background-color: #ff00ff; color: white; font-size: 24px; font-weight: bold; padding: 10px;');
 console.log('%c   /\\_/\\', 'color: #8B4513; font-size: 20px;');
 console.log('%c  ( o.o )', 'color: #8B4513; font-size: 20px;');
 console.log(' %c  > ^ <', 'color: #8B4513; font-size: 20px;');
@@ -13,7 +13,25 @@ document.addEventListener('contextmenu', function(event) {
 });
 
 
-
+function openTab(tabName) {
+    // Hide all tab content
+    var tabContents = document.getElementsByClassName('tab-content');
+    for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove('content-active');
+    }
+    
+    // Remove active class from all buttons
+    var tabButtons = document.getElementsByClassName('tab-button');
+    for (var i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove('but-active');
+    }
+    
+    // Show the selected tab content
+    document.getElementById(tabName).classList.add('content-active');
+    
+    // Add active class to the clicked button
+    event.target.classList.add('but-active');
+}
 
 
 function toggleClass(selector, className) {
