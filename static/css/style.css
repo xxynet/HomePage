@@ -21,6 +21,7 @@
     --purple-text-color: #6c63ff;
     --text-bg-color: #e3e8f0;
     --icon-bg-color: #f0f4fa;
+    --pop-up-box-shadow: #e6e6e6;
     --tab-button-bg-color: #ffffff;
     --tab-button-hover-bg-color: #f0f4fa;
     --tab-button-selected-bg-color: #84b5db;
@@ -92,6 +93,7 @@ html[data-theme="dark"] {
     --purple-text-color: #747bff;
     --text-bg-color: rgb(26, 4, 48);
     --icon-bg-color: rgb(19, 20, 24);
+    --pop-up-box-shadow: rgb(52, 52, 52);
     --tab-button-bg-color: rgb(19, 20, 24);
     --tab-button-hover-bg-color: rgb(31, 33, 35);
     --tab-button-selected-bg-color: rgba(255, 255, 255, 0.873);
@@ -445,6 +447,7 @@ body {
     justify-content: center;
     transition: all 0.3s ease;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .iconItemLong {
@@ -856,26 +859,18 @@ footer {
         left: 0;
     }
 
-
-
-
-
-
-
-
 }
 
 
 
 
 
-.tc {
+.pop-up {
     position: fixed;
     display: flex;
     visibility: hidden;
     width: 100vw;
     height: 100vh;
-
     background: rgba(255, 255, 255, 0);
     z-index: 99999;
     align-items: center;
@@ -883,7 +878,7 @@ footer {
     flex-direction: column;
 }
 
-.tc-main {
+.pop-up-main {
     z-index: 100000;
     width: 80%;
     max-width: 300px;
@@ -897,32 +892,41 @@ footer {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    box-shadow: 0 4px 16px var(--pop-up-box-shadow);
     /*transform: translateY(20%);*/
 }
 
-.tc-img {
+.pop-up-img {
     width: 100%;
     height: 100%;
 }
 
-.tc.active {
+.pop-up.active {
     visibility: visible;
 }
 
-.tc-main.active {
+.pop-up-main.active {
     opacity: 1;
     /*transform: translateY(0);*/
 }
 
-.tc-close {
+.pop-up-close {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40px;
     width: 40px;
-      background-color: var(--project-item-bg-color);
+    box-shadow: 0 4px 16px var(--pop-up-box-shadow);
+    background-color: var(--project-item-bg-color);
     margin-top: 30px;
     border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.pop-up-close.active {
+    opacity: 1;
 }
 
 

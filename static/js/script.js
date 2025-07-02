@@ -42,15 +42,13 @@ function toggleClass(selector, className) {
 }
 
 function PopUp(imageURL) {
-    var tcMainElement = document.querySelector(".tc-img");
+    var popupMainElement = document.querySelector(".pop-up-img");
     if (imageURL) {
-        tcMainElement.src = imageURL;
+        popupMainElement.src = imageURL;
     }
-    toggleClass(".tc-main", "active");
-    toggleClass(".tc", "active");
-
-
-
+    toggleClass(".pop-up-main", "active");
+    toggleClass(".pop-up", "active");
+    toggleClass(".pop-up-close", "active");
 }
 
 
