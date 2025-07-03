@@ -141,6 +141,11 @@
                     </svg>
                 </a>
 
+                <!-- email -->
+                <a class="iconItem" target="_blank" href="mailto:contact@xuxiny.top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"/></svg>
+                </a>
+
                 <!-- sponsor -->
                 <a class="iconItem" target="_blank" onclick="PopUp('./static/img/sponsor.jpg')">
                     <svg width="1.2em" height="1.2em" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -292,7 +297,7 @@
         </div>
 
         <div id="tab2" class="tab-content">
-            <!-- <div class="title">
+            <div class="title">
                 <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="1891" width="26px" height="26px">
                     <path
@@ -303,13 +308,13 @@
                         fill="#000000" p-id="1893"></path>
                 </svg>
                 Introduction
-            </div> -->
+            </div>
             <div class="intro-content">
                 <p>Hi, I'm Caleb, really into tech & language, exploring various fields. i...</p>
 
                 <ul class="intro-ul">
                     <li>create easy-to-use software</li>
-                    <li>make open source projects on <span class="highlight-link"><a target="_blank" href="https://github.com/xxynet">Github</a></span></li>
+                    <li>make open source projects on <a class="highlight-link" target="_blank" href="https://github.com/xxynet">Github</a></li>
                     <li>wanna learn photography & editing</li>
                     <li>am learning foregin languages</li>
                 </ul>
@@ -328,23 +333,66 @@
         </div>
 
         <div id="tab3" class="tab-content">
-            <!-- <div class="title">
+            <div class="title">
                 <svg t="1705257422086" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="1891" width="26px" height="26px">
                     <path
                         d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
                         fill="#000000" p-id="1892"></path>
                     <path
-                        d="M512 336c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176z"
+                        d="M464 688a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z"
                         fill="#000000" p-id="1893"></path>
                 </svg>
-                About Me
-            </div> -->
-            <div class="about-content">
-                <p>CONSTRUCTING...</p>
-                <!-- <p>🌍 Based in 127.0.0.1</p>
-                <p>💻 Working on exciting projects</p>
-                <p>📧 Get in touch: [Your Email]</p> -->
+                FAQ
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>When did you start programming?</span>
+                        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I started programming with <span class="highlight-text">Scratch</span> when i was in elementary school (unfortunately all the projects i had made got lost :(. and learned <span class="highlight-text">Python</span> & <span class="highlight-text">Frontend</span> during the summer vacation before entering middle school. deployed my first ever website on Sep. 20 2021 (it was a blog)</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How can I contact you?</span>
+                        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can reach me through GitHub and Email</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How did you fall into the rabbit hole of language learning?</span>
+                        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>inspired by <a class="highlight-link" target="_blank" href="https://www.bilibili.com/video/BV1ns4y1A7fj/">this vid</a> & yt vids related to comprehensible input</p>
+                    </div>
+                </div>
+
+                <!-- <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What languages can you speak?</span>
+                        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I'm a native Chinese speaker, I can understand English well (though my speaking needs improvement), and I'm learning Japanese. I'm passionate about language learning and cultural exchange.</p>
+                    </div>
+                </div> -->
             </div>
         </div>
 

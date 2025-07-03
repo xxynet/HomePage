@@ -189,3 +189,25 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener("resize", checkProjectItems);
 
 });
+
+// FAQ Toggle Function
+function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    const isActive = faqItem.classList.contains('active');
+    
+    // Close all other FAQ items
+    // const allFaqItems = document.querySelectorAll('.faq-item');
+    // allFaqItems.forEach(item => {
+    //     item.classList.remove('active');
+    // });
+
+    // Collapse current FAQ item
+    if (isActive) {
+        faqItem.classList.remove('active');
+    }
+    
+    // Toggle current FAQ item
+    if (!isActive) {
+        faqItem.classList.add('active');
+    }
+}
