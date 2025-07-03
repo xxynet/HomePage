@@ -545,6 +545,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.button-container:hover {
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+}
+
 .tab-button {
     flex: 1;
     padding: 12px 24px;
