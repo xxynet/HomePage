@@ -1,9 +1,9 @@
-console.log('%cCopyright © 2024-2025 Caleb XXY', 'background-color: #ff00ff; color: white; font-size: 24px; font-weight: bold; padding: 10px;');
-console.log('%c   /\\_/\\', 'color: #8B4513; font-size: 20px;');
-console.log('%c  ( o.o )', 'color: #8B4513; font-size: 20px;');
-console.log(' %c  > ^ <', 'color: #8B4513; font-size: 20px;');
-console.log('  %c /  ~ \\', 'color: #8B4513; font-size: 20px;');
-console.log('  %c/______\\', 'color: #8B4513; font-size: 20px;');
+console.log('%cCopyright © 2024-2025 Caleb XXY', 'background-color: #a285e6; color: white; font-size: 24px; font-weight: bold; padding: 10px;');
+console.log('%c   /\\_/\\', 'color: #f7b267; font-size: 20px;');
+console.log('%c  ( o.o )', 'color: #f7b267; font-size: 20px;');
+console.log(' %c  > ^ <', 'color: #f7b267; font-size: 20px;');
+console.log('  %c /  ~ \\', 'color: #f7b267; font-size: 20px;');
+console.log('  %c/______\\', 'color: #f7b267; font-size: 20px;');
 
 
 
@@ -51,6 +51,10 @@ function PopUp(imageURL) {
     toggleClass(".pop-up-close", "active");
 }
 
+function playSound(soundUrl) {
+  const audio = new Audio(soundUrl);
+  audio.play().catch(e => console.error("Failed to play sound effect:", e));
+}
 
 function left() {
     toggleClass(".left-main", "left-main-open");
@@ -126,8 +130,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-
-
+    document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+            playSound('../static/soundeffects/click.mp3');
+        });
+    });
 
     const switchCheckbox = document.getElementById('myonoffswitch');
     /*夜间自动打开暗色主题*/
@@ -140,12 +147,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     switchCheckbox.addEventListener('change', function () {
+
         if (themeState == "Dark") {
 
+            playSound('../static/soundeffects/light-on.mp3')
             changeTheme("Light");
 
         } else if (themeState == "Light") {
 
+            playSound('../static/soundeffects/light-off.mp3')
             changeTheme("Dark");
         }
     });
@@ -194,6 +204,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function toggleFAQ(element) {
     const faqItem = element.parentElement;
     const isActive = faqItem.classList.contains('active');
+
+    playSound('../static/soundeffects/collapsible_open.mp3')
     
     // Close all other FAQ items
     // const allFaqItems = document.querySelectorAll('.faq-item');
