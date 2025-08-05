@@ -30,3 +30,17 @@ This project was inspired by following projects:
 
 ## Demo
 https://xuxiny.top/
+
+## Deployment
+
+### Vercel
+
+[Fork](https://github.com/xxynet/HomePage/fork) this repo & edit links, intro
+
+Open [Vercel](https://vercel.com/) to deploy from the repo you've just forked
+
+### Netlify
+
+[Fork](https://github.com/xxynet/HomePage/fork) this repo & edit links, intro
+
+Open [Netlify](https://www.netlify.com/) to deploy from the repo you've just forked
